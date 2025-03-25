@@ -99,7 +99,7 @@ const ModernHero = () => {
             >
               <div className="inline-flex items-center bg-white/10 backdrop-blur-sm rounded-full px-4 py-2 mb-8">
                 <Shield className="w-5 h-5 text-absa-600 mr-2" />
-                <span className="text-white font-medium">Banking-Grade Secured Internet</span>
+                <span className="text-white font-medium">Premium Secured Internet</span>
               </div>
 
               <h1 className="text-5xl lg:text-7xl font-bold text-white mb-6">
@@ -117,7 +117,7 @@ const ModernHero = () => {
               </h1>
 
               <p className="text-white/80 text-xl mb-12 max-w-xl">
-                Experience unmatched speed and reliability with our banking-grade secure network.
+                Experience premium internet with enhanced security and reliability.
                 Backed by ABSA Monitor™ and priority support for ABSA clients.
               </p>
 
@@ -230,8 +230,8 @@ const ModernHero = () => {
                   </div>
                   <div className="bg-absa-500/10 rounded-xl p-4 backdrop-blur-sm">
                     <Zap className="w-5 h-5 text-absa-600 mb-2" />
-                    <div className="text-white text-sm font-medium">Banking Security</div>
-                    <div className="text-white/70 text-xs">Enterprise-grade protection</div>
+                    <div className="text-white text-sm font-medium">Enhanced Security</div>
+                    <div className="text-white/70 text-xs">Advanced protection</div>
                   </div>
                 </div>
               </div>
