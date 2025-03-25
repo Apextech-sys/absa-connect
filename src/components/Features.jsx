@@ -7,8 +7,8 @@ const Features = () => {
   const features = [
     {
       icon: Shield,
-      title: "Banking-Grade Security",
-      description: "Benefit from the same security protocols that protect ABSA's financial systems",
+      title: "Enhanced Security",
+      description: "Benefit from advanced security protocols for a safer online experience",
       gradient: "from-absa-600 to-absa-700"
     },
     {
@@ -31,8 +31,8 @@ const Features = () => {
     },
     {
       icon: Cloud,
-      title: "Secure Data Routing",
-      description: "Enhanced routing security that protects your personal information",
+      title: "Optimized Data Routing",
+      description: "Improved routing technology for better performance and reliability",
       gradient: "from-absa-600 to-absa-700"
     },
     {
@@ -44,35 +44,9 @@ const Features = () => {
   ];
 
   return (
-    <div className="relative min-h-[600px] flex items-center bg-black overflow-hidden">
-      {/* Background Elements */}
-      <div className="absolute inset-0 bg-gradient-to-br from-black via-absa-800/50 to-black">
-        {/* Animated Particles */}
-        {[...Array(10)].map((_, i) => (
-          <motion.div
-            key={i}
-            className="absolute w-2 h-2 bg-absa-600 rounded-full"
-            initial={{ 
-              x: Math.random() * window.innerWidth,
-              y: Math.random() * window.innerHeight,
-              opacity: 0 
-            }}
-            animate={{ 
-              x: Math.random() * window.innerWidth,
-              y: Math.random() * window.innerHeight,
-              opacity: [0, 1, 0],
-            }}
-            transition={{
-              duration: Math.random() * 5 + 5,
-              repeat: Infinity,
-              ease: "linear"
-            }}
-          />
-        ))}
-      </div>
-
+    <div className="relative min-h-[600px] flex items-center overflow-hidden">
       {/* Content */}
-      <div className="relative w-full py-24">
+      <div className="relative w-full py-24 pb-48">
         <div className="relative max-w-7xl mx-auto px-6">
           <div className="text-center mb-16">
             <motion.div
@@ -85,7 +59,7 @@ const Features = () => {
                 Why Choose ABSA Connect?
               </h2>
               <p className="text-lg text-white/80 max-w-2xl mx-auto">
-                Experience the difference with our banking-grade secure network infrastructure and priority client support
+                Experience the difference with our premium network infrastructure and priority client support
               </p>
             </motion.div>
           </div>
@@ -140,7 +114,7 @@ const Features = () => {
             className="mt-16 pt-16 border-t border-white/10"
           >
             <div className="grid md:grid-cols-4 gap-8">
-              {[ 
+              {[
                 { number: "99.9%", label: "Network Uptime" },
                 { number: "24/7", label: "Connection Monitoring" },
                 { number: "1000Gbps", label: "Routing Network" },
@@ -152,12 +126,16 @@ const Features = () => {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ duration: 0.5, delay: index * 0.1 }}
-                  className="text-center group"
+                  className="text-center group relative"
                 >
-                  <div className="text-3xl font-bold text-white group-hover:text-absa-600 transition-colors">
-                    {stat.number}
+                  {/* Add a subtle background to improve readability */}
+                  <div className="absolute inset-0 bg-black/50 backdrop-blur-sm rounded-xl -z-10"></div>
+                  <div className="p-4">
+                    <div className="text-3xl font-bold text-white group-hover:text-absa-600 transition-colors">
+                      {stat.number}
+                    </div>
+                    <div className="text-white/90 font-medium">{stat.label}</div>
                   </div>
-                  <div className="text-white/70">{stat.label}</div>
                 </motion.div>
               ))}
             </div>
