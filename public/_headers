@@ -1,0 +1,11 @@
+/*
+  X-Frame-Options: DENY
+  X-Content-Type-Options: nosniff
+  Referrer-Policy: no-referrer-when-downgraded
+  X-XSS-Protection: 1; mode=block
+
+/*.js
+  Content-Type: application/javascript
+
+/* 
+  Cache-Control: public, max-age=0, must-revalidate

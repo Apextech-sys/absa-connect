@@ -1,0 +1,88 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Print Styles */
+@media print {
+  @page {
+    margin: 2cm;
+  }
+  
+  /* Reset visibility for all elements */
+  body * {
+    visibility: visible !important;
+  }
+
+  /* Print-specific utilities */
+  .print\:hidden {
+    display: none !important;
+  }
+
+  .print\:block {
+    display: block !important;
+  }
+
+  .print\:relative {
+    position: relative !important;
+  }
+
+  .print\:overflow-visible {
+    overflow: visible !important;
+  }
+
+  .print\:break-inside-avoid {
+    break-inside: avoid;
+  }
+
+  .print\:max-w-none {
+    max-width: none !important;
+  }
+
+  /* Background colors for print */
+  .bg-wondernet-50 {
+    background-color: #f8fafc !important;
+  }
+
+  .bg-black/50 {
+    background-color: transparent !important;
+  }
+
+  /* Remove shadows and borders for cleaner print */
+  .shadow-2xl,
+  .shadow-lg,
+  .shadow-sm {
+    box-shadow: none !important;
+  }
+
+  /* Ensure proper page breaks */
+  h2 {
+    break-after: avoid;
+  }
+
+  /* Improve text contrast for print */
+  .text-gray-600 {
+    color: #374151 !important;
+  }
+
+  /* Remove any fixed positioning */
+  .fixed {
+    position: relative !important;
+  }
+
+  /* Ensure full width content */
+  .max-w-5xl,
+  .max-w-7xl {
+    max-width: none !important;
+  }
+
+  /* Reset margins and padding for print */
+  .p-8,
+  .px-4,
+  .py-8 {
+    padding: 1rem !important;
+  }
+
+  .m-4 {
+    margin: 0 !important;
+  }
+}

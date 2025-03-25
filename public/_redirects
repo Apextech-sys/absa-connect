@@ -1,0 +1,5 @@
+# Correct SPA redirect rule
+/* /index.html  200
+
+# Add specific redirects above the catch-all
+/old-page /new-page  301

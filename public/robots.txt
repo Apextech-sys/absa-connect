@@ -1,0 +1,17 @@
+# Production environment (all variations of wondernet.co.za)
+Host: https://wondernet.co.za
+Host: https://www.wondernet.co.za
+
+User-agent: *
+Allow: /
+Disallow: /privacy-policy
+Disallow: /terms-and-conditions
+Disallow: /acceptable-use-policy
+
+# Sitemap for production (always use HTTPS)
+Sitemap: https://wondernet.co.za/sitemap.xml
+
+# All other environments (staging/development)
+Host: *
+User-agent: *
+Disallow: /
