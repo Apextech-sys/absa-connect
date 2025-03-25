@@ -242,7 +242,7 @@ const PackagesMegaMenu = ({ isOpen }) => {
               <Link 
                 to="/compare"
                 onClick={() => trackClick('compare_packages', 'packages_menu')}
-                className="block w-full px-4 py-2 bg-white/5 hover:bg-white/10 text-purple-400 rounded-lg font-medium transition-colors text-center border border-white/10"
+                className="block w-full px-4 py-2 bg-white/5 hover:bg-white/10 text-absa-500 rounded-lg font-medium transition-colors text-center border border-white/10"
               >
                 Compare All Packages
               </Link>
