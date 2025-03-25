@@ -211,7 +211,7 @@ const ModernHero = () => {
                         <div className="space-y-1">
                           {tier.features.map((feature, i) => (
                             <div key={i} className="flex items-center text-white/70 text-sm">
-                              <Check className="w-4 h-4 mr-1 text-purple-400" />
+                              <Check className="w-4 h-4 mr-1 text-absa-500" />
                               {feature}
                             </div>
                           ))}
