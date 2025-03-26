@@ -160,16 +160,16 @@ const SpeedTierCard = ({ tier, speed, price, isRecommended, meetsRequirements, r
       onMouseEnter={handleCardView}
     >
     <div className={`bg-white rounded-2xl shadow-xl overflow-hidden ${
-      isRecommended ? 'ring-2 ring-wondernet-600' : ''
+      isRecommended ? 'ring-2 ring-absa-600' : ''
     }`}>
       <div className={`p-6 ${
         isRecommended
-          ? 'bg-gradient-to-br from-wondernet-600 to-wondernet-800 text-white'
+          ? 'bg-gradient-to-br from-absa-600 to-absa-800 text-white'
           : 'bg-gray-50'
       }`}>
         {isRecommended && (
           <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
-            <span className="bg-white text-wondernet-600 px-4 py-1 rounded-full text-sm font-bold shadow-lg">
+            <span className="bg-white text-absa-600 px-4 py-1 rounded-full text-sm font-bold shadow-lg">
               Recommended
             </span>
           </div>
@@ -187,12 +187,12 @@ const SpeedTierCard = ({ tier, speed, price, isRecommended, meetsRequirements, r
       <div className="p-6 space-y-6">
         <p className="text-gray-600">{tier.description}</p>
 
-        <div className="bg-wondernet-50 p-4 rounded-lg">
+        <div className="bg-absa-50 p-4 rounded-lg">
           <div className="flex items-start space-x-2">
-            <Info className="w-5 h-5 text-wondernet-600 flex-shrink-0 mt-0.5" />
+            <Info className="w-5 h-5 text-absa-600 flex-shrink-0 mt-0.5" />
             <div>
-              <h4 className="font-medium text-wondernet-900 mb-1">Speed Information</h4>
-              <p className="text-sm text-wondernet-700">
+              <h4 className="font-medium text-absa-900 mb-1">Speed Information</h4>
+              <p className="text-sm text-absa-700">
                 {meetsRequirements
                   ? `This package provides ${speed}Mbps, which we recommend as a better alternative based on your requirements you've disclosed`
                   : `This package provides ${speed}Mbps, which is below your ideal ${requiredSpeed}Mbps requirement`}
@@ -215,7 +215,7 @@ const SpeedTierCard = ({ tier, speed, price, isRecommended, meetsRequirements, r
 
         <div className="p-4 bg-gray-50 rounded-lg">
           <div className="flex items-start space-x-2">
-            <Info className="w-5 h-5 text-wondernet-600 flex-shrink-0 mt-0.5" />
+            <Info className="w-5 h-5 text-absa-600 flex-shrink-0 mt-0.5" />
             <div>
               <h4 className="font-medium text-gray-900">Typical Monthly Usage: {tier.typicalUsage.amount}</h4>
               <p className="text-sm text-gray-600 mt-1">
@@ -255,7 +255,7 @@ const SpeedTierCard = ({ tier, speed, price, isRecommended, meetsRequirements, r
 
         <div className="pt-4 border-t text-center">
           <div className="text-sm text-gray-500">Starting from</div>
-          <div className="text-3xl font-bold text-wondernet-600">
+          <div className="text-3xl font-bold text-absa-600">
             R{price}
           </div>
           <div className="text-sm text-gray-500">per month</div>
@@ -265,7 +265,7 @@ const SpeedTierCard = ({ tier, speed, price, isRecommended, meetsRequirements, r
           onClick={onCheckCoverage}
           className={`w-full py-3 rounded-lg transition-colors ${
             isRecommended
-              ? 'bg-wondernet-600 text-white hover:bg-wondernet-500'
+              ? 'bg-absa-600 text-white hover:bg-absa-500'
               : 'bg-gray-100 text-gray-900 hover:bg-gray-200'
           }`}
         >
@@ -281,17 +281,17 @@ const RecommendationInfoCard = ({ title, message, impact, recommendedTier }) => 
   const tierInfo = speedTiers[recommendedTier];
   
   return (
-    <div className="bg-wondernet-50 p-6 rounded-xl">
-      <h3 className="text-xl font-semibold text-wondernet-900 mb-2">{title}</h3>
-      <p className="text-wondernet-700 mb-4">{message}</p>
-      <div className="space-y-3 text-wondernet-600">
+    <div className="bg-absa-50 p-6 rounded-xl">
+      <h3 className="text-xl font-semibold text-absa-900 mb-2">{title}</h3>
+      <p className="text-absa-700 mb-4">{message}</p>
+      <div className="space-y-3 text-absa-600">
         <div className="flex items-start space-x-2">
-          <Check className="h-5 w-5 text-wondernet-500 mt-0.5" />
+          <Check className="h-5 w-5 text-absa-500 mt-0.5" />
           <p>For optimal performance and budget balance, we recommend {tierInfo.name} ({tierInfo.range[0]}-{tierInfo.range[1]}Mbps)</p>
         </div>
         {impact && (
           <div className="flex items-start space-x-2">
-            <Info className="h-5 w-5 text-wondernet-500 mt-0.5" />
+            <Info className="h-5 w-5 text-absa-500 mt-0.5" />
             <p>{impact}</p>
           </div>
         )}
@@ -306,16 +306,16 @@ const Option = ({ value, label, description, icon, selected, onClick }) => (
     whileTap={{ scale: 0.98 }}
     className={`cursor-pointer rounded-xl p-6 transition-all duration-200 ${
       selected
-        ? 'bg-gradient-to-br from-wondernet-900 to-wonderblue-800 text-white shadow-lg'
-        : 'bg-white hover:bg-wondernet-50 border border-gray-200'
+        ? 'bg-gradient-to-br from-absa-700 to-absa-900 text-white shadow-lg'
+        : 'bg-gray-50 hover:bg-gray-100 border border-gray-200'
     }`}
     onClick={onClick}
   >
     <div className="flex flex-col items-center text-center space-y-2">
-      {icon && <div className={selected ? 'text-white' : 'text-wondernet-600'}>{icon}</div>}
-      <div className="font-medium">{label}</div>
+      {icon && <div className={selected ? 'text-white' : 'text-absa-600'}>{icon}</div>}
+      <div className={`font-medium ${selected ? 'text-white' : 'text-gray-900'}`}>{label}</div>
       {description && (
-        <div className={`text-sm ${selected ? 'text-white/80' : 'text-gray-500'}`}>
+        <div className={`text-sm ${selected ? 'text-white/80' : 'text-gray-700'}`}>
           {description}
         </div>
       )}
@@ -558,7 +558,7 @@ const RecommendationWizard = () => {
         {recommendation.budgetMismatch ? (
           <>
             <div className="mb-8">
-              <h3 className="text-lg font-semibold text-wondernet-900 mb-2">
+              <h3 className="text-lg font-semibold text-absa-900 mb-2">
                 We found two options for you:
               </h3>
               <p className="text-gray-600">
@@ -685,7 +685,7 @@ const RecommendationWizard = () => {
                 transition={{ duration: 0.3 }}
               >
                 <div className="bg-white rounded-2xl shadow-xl p-8 mb-8">
-                  <h2 className="text-3xl font-bold text-wondernet-900 mb-6">
+                  <h2 className="text-3xl font-bold text-absa-900 mb-6">
                     Your Perfect Package Match
                   </h2>
                   <p className="text-gray-600 mb-12 max-w-2xl mx-auto">
@@ -715,7 +715,7 @@ const RecommendationWizard = () => {
                 <div className="mb-8">
                   <div className="h-2 bg-gray-200 rounded-full">
                     <div
-                      className="h-2 bg-gradient-to-r from-wondernet-600 to-wonderblue-600 rounded-full transition-all duration-300"
+                      className="h-2 bg-gradient-to-r from-absa-600 to-absa-700 rounded-full transition-all duration-300"
                       style={{ width: `${((step + 1) / steps.length) * 100}%` }}
                     />
                   </div>
@@ -725,7 +725,7 @@ const RecommendationWizard = () => {
                 </div>
 
                 <div className="text-center mb-8">
-                  <h2 className="text-2xl font-bold text-wondernet-900 mb-2">
+                  <h2 className="text-2xl font-bold text-absa-900 mb-2">
                     {currentStep.title}
                   </h2>
                   <p className="text-gray-600">{currentStep.subtitle}</p>
@@ -765,7 +765,7 @@ const RecommendationWizard = () => {
                     disabled={!canProceed}
                     className={`flex items-center px-6 py-3 rounded-lg transition-all ${
                       canProceed
-                        ? 'bg-gradient-to-r from-wondernet-600 to-wonderblue-600 text-white hover:shadow-lg'
+                        ? 'bg-gradient-to-r from-absa-600 to-absa-700 text-white hover:shadow-lg'
                         : 'bg-gray-100 text-gray-400 cursor-not-allowed'
                     }`}
                   >
